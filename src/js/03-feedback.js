@@ -19,8 +19,10 @@ function onFormInput(event) {
 function onFormSubmit(event) {
   event.preventDefault();
   console.log(JSON.parse(localStorage.getItem(FORM_STORAGE_KEY)));
-  objectData = {};
   localStorage.removeItem(FORM_STORAGE_KEY);
+  for (const key in objectData) {
+    delete objectData[key];
+  }
   event.currentTarget.reset();
 }
 
