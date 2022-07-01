@@ -10,10 +10,8 @@ formEl.addEventListener('submit', onFormSubmit);
 updateChanges();
 
 function onFormInput(event) {
-  console.log(objectData);
   objectData[event.target.name] = event.target.value;
   localStorage.setItem('feedback-form-state', JSON.stringify(objectData));
-  console.log(objectData);
 }
 
 function onFormSubmit(event) {
