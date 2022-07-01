@@ -21,6 +21,6 @@ function onPlayerTimeUpdate() {
 function continueToWatch() {
   const timeBeforeUpdate = localStorage.getItem('videoplayer-current-time');
   if (timeBeforeUpdate) {
-    player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+    player.setCurrentTime(timeBeforeUpdate);
   }
 }
